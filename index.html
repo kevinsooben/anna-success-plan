@@ -17,6 +17,23 @@
             line-height: 1;
             color: #118AB2;
         }
+        .collapse-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            cursor: pointer;
+            text-align: center;
+            transition: color 0.3s;
+        }
+        .collapse-icon {
+            margin-left: 0.5rem;
+            transform: rotate(0deg);
+            transition: transform 0.3s;
+        }
+        .collapse-icon.rotated {
+            transform: rotate(90deg);
+        }
     </style>
 </head>
 <body class="bg-gray-50" style="background-color: #F8F9FA;">
@@ -24,26 +41,31 @@
     <div class="container mx-auto p-4 md:p-8">
 
         <header class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-extrabold" style="color: #073B4C;">Our Partnership for Success. 🚀</h1>
-            <p class="mt-4 text-lg" style="color: #073B4C;">Welcome to our shared plan for a great school year! We're a team, and our main focus is your happiness and success. To kick things off, we're giving you an allowance and keeping your current screen time as is. We know your friends and independence are super important. We believe in you, and these simple guidelines are here to support you in managing your responsibilities.</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold" style="color: #073B4C;">Anna's Partnership for Success. 🚀</h1>
+            <p class="mt-4 text-lg" style="color: #073B4C;">Welcome, Anna, to our shared plan for a great school year! We're a team, and our main focus is your happiness and success. To kick things off, we're giving you an allowance and keeping your current screen time as is. We know your friends and independence are super important. We believe in you, and these simple guidelines are here to support you in managing your responsibilities.</p>
         </header>
 
         <section class="mt-16 md:col-span-4">
             <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-                <h2 class="text-3xl font-bold text-center mb-2" style="color: #073B4C;">What Matters Most 💖</h2>
-                <p class="text-center text-gray-600 max-w-3xl mx-auto mb-8">Ultimately, this plan is about helping you have a happy, fulfilling life. We want you to feel good about yourself, enjoy time with your friends, and connect with your family. These moments are what truly make life amazing, and building good habits helps make more space for them!</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                    <div class="bg-gray-50 p-4 rounded-lg flex flex-col items-center">
-                        <span class="text-4xl mb-2">😊</span>
-                        <p class="font-semibold text-gray-700">Being Happy & Feeling Positive</p>
-                    </div>
-                    <div class="bg-gray-50 p-4 rounded-lg flex flex-col items-center">
-                        <span class="text-4xl mb-2">👭</span>
-                        <p class="font-semibold text-gray-700">Enjoying Time with Friends</p>
-                    </div>
-                    <div class="bg-gray-50 p-4 rounded-lg flex flex-col items-center">
-                        <span class="text-4xl mb-2">👨‍👩‍👧‍👦</span>
-                        <p class="font-semibold text-gray-700">Connecting with Family</p>
+                <button class="collapse-button" data-target="what-matters-most">
+                    <h2 class="text-3xl font-bold text-center mb-2" style="color: #073B4C;">What Matters Most 💖</h2>
+                    <span class="collapse-icon">▶</span>
+                </button>
+                <div id="what-matters-most" class="hidden">
+                    <p class="text-center text-gray-600 max-w-3xl mx-auto mb-8">Ultimately, this plan is about helping you have a happy, fulfilling life. We want you to feel good about yourself, enjoy time with your friends, and connect with your family. These moments are what truly make life amazing, and building good habits helps make more space for them!</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                        <div class="bg-gray-50 p-4 rounded-lg flex flex-col items-center">
+                            <span class="text-4xl mb-2">😊</span>
+                            <p class="font-semibold text-gray-700">Being Happy & Feeling Positive</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg flex flex-col items-center">
+                            <span class="text-4xl mb-2">👭</span>
+                            <p class="font-semibold text-gray-700">Enjoying Time with Friends</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg flex flex-col items-center">
+                            <span class="text-4xl mb-2">👨‍👩‍👧‍👦</span>
+                            <p class="font-semibold text-gray-700">Connecting with Family</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -81,98 +103,116 @@
 
         <section class="mt-16 md:col-span-4">
             <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-                <h2 class="text-3xl font-bold text-center mb-2" style="color: #073B4C;">General House Rules 🏡</h2>
-                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Being part of a family is being part of a team - there is give and take in everything, just like life. These guidelines help us all live happily and respectfully together, creating a peaceful and enjoyable home environment for everyone.</p>
-                <ul class="list-disc list-inside text-lg text-gray-700 space-y-3 max-w-2xl mx-auto">
-                    <li><span class="font-semibold" style="color: #073B4C;">Dinner time connection.</span> We don't mind when you go out for dinner, but we love having dinner with you when you are home. If you don't like what we cook, please help us with suggestions.</li>
-                    <li><span class="font-semibold" style="color: #073B4C;">Contributing to our home.</span> We all pitch in to keep our home tidy and comfortable. Taking initiative with tasks like clearing your dishes or tidying your space really helps everyone, and it's wonderful when we notice things that need doing together.</li>
-                    <li><span class="font-semibold" style="color: #073B4C;">Keeping our spaces tidy.</span> We take responsibility for clearing up after ourselves, like putting blankets away and tossing snack wrappers in the trash, to keep our shared spaces pleasant for everyone.</li>
-                    <li><span class="font-semibold" style="color: #073B4C;">Respectful communication.</span> We always aim to treat each other with kindness and respect in our home. This means communicating calmly, even when we feel frustrated, and finding ways to work through disagreements together. Please also let us know important information like if you are not coming for dinner or you will be late.</li>
-                    <li><span class="font-semibold" style="color: #073B4C;">Respect for belongings.</span> We respect each other's belongings and privacy by always asking before using something that isn't ours, and putting them back when you are finished.</li>
-                    <li><span class="font-semibold" style="color: #073B4C;">Sharing household resources.</span> When it comes to laundry, we help keep things flowing by doing our washing in a timely manner and making sure the washer and dryer are available for others when we're done.</li>
-                    <li><span class="font-semibold" style="color: #073B4C;">Home time.</span> School nights home by 10.30pm and Friday and Saturday by midnight. If you don't respect these times or communicate with us, groundings may occur.</li>
-                </ul>
+                <button class="collapse-button" data-target="house-rules">
+                    <h2 class="text-3xl font-bold text-center mb-2" style="color: #073B4C;">General House Rules 🏡</h2>
+                    <span class="collapse-icon">▶</span>
+                </button>
+                <div id="house-rules" class="hidden">
+                    <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Being part of a family is being part of a team - there is give and take in everything, just like life. These guidelines help us all live happily and respectfully together, creating a peaceful and enjoyable home environment for everyone.</p>
+                    <ul class="list-disc list-inside text-lg text-gray-700 space-y-3 max-w-2xl mx-auto">
+                        <li><span class="font-semibold" style="color: #073B4C;">Dinner time connection.</span> We don't mind when you go out for dinner, but we love having dinner with you when you are home. If you don't like what we cook, please help us with suggestions.</li>
+                        <li><span class="font-semibold" style="color: #073B4C;">Contributing to our home.</span> We all pitch in to keep our home tidy and comfortable. Taking initiative with tasks like clearing your dishes or tidying your space really helps everyone, and it's wonderful when we notice things that need doing together.</li>
+                        <li><span class="font-semibold" style="color: #073B4C;">Keeping our spaces tidy.</span> We take responsibility for clearing up after ourselves, like putting blankets away and tossing snack wrappers in the trash, to keep our shared spaces pleasant for everyone.</li>
+                        <li><span class="font-semibold" style="color: #073B4C;">Respectful communication.</span> We always aim to treat each other with kindness and respect in our home. This means communicating calmly, even when we feel frustrated, and finding ways to work through disagreements together. Please also let us know important information like if you are not coming for dinner or you will be late.</li>
+                        <li><span class="font-semibold" style="color: #073B4C;">Respect for belongings.</span> We respect each other's belongings and privacy by always asking before using something that isn't ours, and putting them back when you are finished.</li>
+                        <li><span class="font-semibold" style="color: #073B4C;">Sharing household resources.</span> When it comes to laundry, we help keep things flowing by doing our washing in a timely manner and making sure the washer and dryer are available for others when we're done.</li>
+                        <li><span class="font-semibold" style="color: #073B4C;">Home time.</span> School nights home by 10.30pm and Friday and Saturday by midnight. If you don't respect these times or communicate with us, groundings may occur.</li>
+                    </ul>
+                </div>
             </div>
         </section>
         
         <section class="mt-16 md:col-span-4">
             <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-                <h2 class="text-3xl font-bold text-center mb-2" style="color: #073B4C;">Your Allowance 💰</h2>
-                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">We know it's difficult for you to get a steady job with all your activities, so we are giving you an allowance.</p>
-                <ul class="list-disc list-inside text-lg text-gray-700 space-y-3 max-w-2xl mx-auto">
-                    <li><span class="font-semibold" style="color: #073B4C;">Allowance Amount:</span> **$25** per week.</li>
-                    <li><span class="font-semibold" style="color: #073B4C;">Payment Day:</span> Every **Friday** automatically into your bank account.</li>
-                    <li><span class="font-semibold" style="color: #073B4C;">For Your Spending:</span> This is your money to spend on anything you want.</li>
-                    <li><span class="font-semibold" style="color: #073B4C;">Budgeting is Key:</span> We won't give you extra money if you ask.</li>
-                    <li><span class="font-semibold" style="color: #073B4C;">This is a privilege.</span> Your allowance can be stopped if you do not consistently follow the agreements we've made for schoolwork and house rules.</li>
-                </ul>
+                <button class="collapse-button" data-target="your-allowance">
+                    <h2 class="text-3xl font-bold text-center mb-2" style="color: #073B4C;">Your Allowance 💰</h2>
+                    <span class="collapse-icon">▶</span>
+                </button>
+                <div id="your-allowance" class="hidden">
+                    <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">We know it's difficult for you to get a steady job with all your activities, so we are giving you an allowance.</p>
+                    <ul class="list-disc list-inside text-lg text-gray-700 space-y-3 max-w-2xl mx-auto">
+                        <li><span class="font-semibold" style="color: #073B4C;">Allowance Amount:</span> **$25** per week.</li>
+                        <li><span class="font-semibold" style="color: #073B4C;">Payment Day:</span> Every **Friday** automatically into your bank account.</li>
+                        <li><span class="font-semibold" style="color: #073B4C;">For Your Spending:</span> This is your money to spend on anything you want.</li>
+                        <li><span class="font-semibold" style="color: #073B4C;">Budgeting is Key:</span> We won't give you extra money if you ask.</li>
+                        <li><span class="font-semibold" style="color: #073B4C;">This is a privilege.</span> Your allowance can be stopped if you do not consistently follow the agreements we've made for schoolwork and house rules.</li>
+                    </ul>
+                </div>
             </div>
         </section>
         
         <section class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="rounded-2xl shadow-lg p-8 flex flex-col items-center text-center" style="background-color: #06D6A0;">
-                <div class="text-6xl mb-4">🎉</div>
-                <h2 class="text-3xl font-bold mb-4 text-white">More Good Stuff</h2>
-                <p class="text-white mb-6">Here are the rewards for getting As and Bs in each quarter.</p>
-                <div class="w-full text-left space-y-4">
-                    <div class="bg-white/30 p-4 rounded-lg flex items-center">
-                        <span class="text-4xl mr-4">🚗</span>
-                        <span class="font-bold text-white text-xl">1st Quarter: Driver's Ed Paid For.</span>
-                    </div>
-                    <div class="bg-white/30 p-4 rounded-lg flex items-center">
-                        <span class="text-4xl mr-4">📱</span>
-                        <span class="font-bold text-white text-xl">2nd Quarter: A New iPhone 15.</span>
-                    </div>
-                    <div class="bg-white/30 p-4 rounded-lg flex items-center">
-                        <span class="text-4xl mr-4">🚗</span>
-                        <span class="font-bold text-white text-xl">3rd Quarter: Driving Lessons.</span>
-                    </div>
-                    <div class="bg-white/30 p-4 rounded-lg flex items-center">
-                        <span class="text-4xl mr-4">🎁</span>
-                        <span class="font-bold text-white text-xl">4th Quarter: Something of your choice up to $200 value.</span>
+                <button class="collapse-button" data-target="more-good-stuff">
+                    <h2 class="text-3xl font-bold mb-4 text-white">More Good Stuff 🎉</h2>
+                    <span class="collapse-icon">▶</span>
+                </button>
+                <div id="more-good-stuff" class="hidden">
+                    <p class="text-white mb-6">Here are the rewards for getting As and Bs in each quarter.</p>
+                    <div class="w-full text-left space-y-4">
+                        <div class="bg-white/30 p-4 rounded-lg flex items-center">
+                            <span class="text-4xl mr-4">🚗</span>
+                            <span class="font-bold text-white text-xl">1st Quarter: Driver's Ed Paid For.</span>
+                        </div>
+                        <div class="bg-white/30 p-4 rounded-lg flex items-center">
+                            <span class="text-4xl mr-4">📱</span>
+                            <span class="font-bold text-white text-xl">2nd Quarter: A New iPhone 15.</span>
+                        </div>
+                        <div class="bg-white/30 p-4 rounded-lg flex items-center">
+                            <span class="text-4xl mr-4">🚗</span>
+                            <span class="font-bold text-white text-xl">3rd Quarter: Driving Lessons.</span>
+                        </div>
+                        <div class="bg-white/30 p-4 rounded-lg flex items-center">
+                            <span class="text-4xl mr-4">🎁</span>
+                            <span class="font-bold text-white text-xl">4th Quarter: Something of your choice up to $200 value.</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-
         <section class="mt-16 md:col-span-4">
             <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-                <h2 class="text-3xl font-bold text-center mb-2" style="color: #073B4C;">Important things to understand</h2>
-                <p class="text-center text-gray-600 max-w-3xl mx-auto">If things aren't going well, (like below) we will gently adjust things to help you refocus and get back on track.</p>
-                <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 max-w-2xl mx-auto mb-8">
-                    <li>A grade drops below a B.</li>
-                    <li>You are tardy to or miss a class.</li>
-                    <li>We receive an email from a teacher about your behavior or disruption in the classroom, including reports of phone and headphone use.</li>
-                    <li>Consistently breaking house rules</li>
-                    <li>You don't come home on time without communicating with us.</li>
-                    <li>You don't follow up on important NCSA activities, like responding to coaches' emails.</li>
-                    <li>Any other obviously unacceptable behavior.</li>
-                </ul>
-                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Each adjustment below will typically last for one week, as long as things improve.</p>
-                <div class="flex flex-col items-center space-y-4">
-                    <div class="w-full max-w-md text-center p-4 rounded-lg font-semibold" style="background-color: #06D6A0; color: white;">
-                        Normal State: No restrictions
-                    </div>
-                    <div class="flowchart-arrow">⬇️</div>
-                    <div class="w-full max-w-md text-center p-4 rounded-lg font-semibold" style="background-color: #118AB2; color: white;">
-                        Step 1: Phone & TV blocked at 11:00 PM
-                    </div>
-                    <div class="flowchart-arrow">⬇️</div>
-                     <div class="w-full max-w-md text-center p-4 rounded-lg font-semibold" style="background-color: #FFD166; color: #073B4C;">
-                        Step 2: Phone & TV blocked at 9:00 PM
-                    </div>
-                    <div class="flowchart-arrow">⬇️</div>
-                    <div class="w-full max-w-md text-center p-4 rounded-lg font-semibold" style="background-color: #FFD166; color: #073B4C;">
-                        Step 3: Phone blocked during school time 8am to 3pm
-                    </div>
-                    <div class="flowchart-arrow">⬇️</div>
-                    <div class="w-full max-w-md text-center p-4 rounded-lg font-semibold" style="background-color: #FF6B6B; color: white;">
-                        Step 4: No Phone or TV Access After School (Except for essential use)
-                    </div>
-                    <div class="flowchart-arrow">⬇️</div>
-                    <div class="w-full max-w-md text-center p-4 rounded-lg font-semibold" style="background-color: #073B4C; color: white;">
-                        Step 5: Complete Loss of Screen Access
+                <button class="collapse-button" data-target="understanding-section">
+                    <h2 class="text-3xl font-bold text-center mb-2" style="color: #073B4C;">Important things to understand</h2>
+                    <span class="collapse-icon">▶</span>
+                </button>
+                <div id="understanding-section" class="hidden">
+                    <p class="text-center text-gray-600 max-w-3xl mx-auto">If things aren't going well, (like below) we will gently adjust things to help you refocus and get back on track.</p>
+                    <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 max-w-2xl mx-auto mb-8">
+                        <li>A grade drops below a B.</li>
+                        <li>You are tardy to or miss a class.</li>
+                        <li>We receive an email from a teacher about your behavior or disruption in the classroom, including reports of phone and headphone use.</li>
+                        <li>Consistently breaking house rules</li>
+                        <li>You don't come home on time without communicating with us.</li>
+                        <li>You don't follow up on important NCSA activities, like responding to coaches' emails.</li>
+                        <li>Any other obviously unacceptable behavior.</li>
+                    </ul>
+                    <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Each adjustment below will typically last for one week, as long as things improve.</p>
+                    <div class="flex flex-col items-center space-y-4">
+                        <div class="w-full max-w-md text-center p-4 rounded-lg font-semibold" style="background-color: #06D6A0; color: white;">
+                            Normal State: No restrictions
+                        </div>
+                        <div class="flowchart-arrow">⬇️</div>
+                        <div class="w-full max-w-md text-center p-4 rounded-lg font-semibold" style="background-color: #118AB2; color: white;">
+                            Step 1: Phone & TV blocked at 11:00 PM
+                        </div>
+                        <div class="flowchart-arrow">⬇️</div>
+                         <div class="w-full max-w-md text-center p-4 rounded-lg font-semibold" style="background-color: #FFD166; color: #073B4C;">
+                            Step 2: Phone & TV blocked at 9:00 PM
+                        </div>
+                        <div class="flowchart-arrow">⬇️</div>
+                        <div class="w-full max-w-md text-center p-4 rounded-lg font-semibold" style="background-color: #FFD166; color: #073B4C;">
+                            Step 3: Phone blocked during school time 8am to 3pm
+                        </div>
+                        <div class="flowchart-arrow">⬇️</div>
+                        <div class="w-full max-w-md text-center p-4 rounded-lg font-semibold" style="background-color: #FF6B6B; color: white;">
+                            Step 4: No Phone or TV Access After School (Except for essential use)
+                        </div>
+                        <div class="flowchart-arrow">⬇️</div>
+                        <div class="w-full max-w-md text-center p-4 rounded-lg font-semibold" style="background-color: #073B4C; color: white;">
+                            Step 5: Complete Loss of Screen Access
+                        </div>
                     </div>
                 </div>
             </div>
@@ -180,14 +220,35 @@
         
         <section class="mt-16">
             <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
-                <div class="text-6xl mb-4">📚</div>
-                <h2 class="text-3xl font-bold mb-4" style="color: #073B4C;">Support Along the Way</h2>
-                <p class="text-gray-600">If things get tough, we'll explore bringing in a **combination of tutors and coaches** to help you get back on track. This isn't a consequence—it's a way for us to provide you with the best possible tools and guidance to understand your schoolwork and develop strong study habits. Think of them as personal coaches helping you hit your academic goals.</p>
+                <button class="collapse-button" data-target="support-section">
+                    <h2 class="text-3xl font-bold mb-4" style="color: #073B4C;">Support Along the Way 📚</h2>
+                    <span class="collapse-icon">▶</span>
+                </button>
+                <div id="support-section" class="hidden">
+                    <p class="text-gray-600">If things get tough, we'll explore bringing in a **combination of tutors and coaches** to help you get back on track. This isn't a consequence—it's a way for us to provide you with the best possible tools and guidance to understand your schoolwork and develop strong study habits. Think of them as personal coaches helping you hit your academic goals.</p>
+                </div>
             </div>
         </section>
 
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const collapseButtons = document.querySelectorAll('.collapse-button');
+        
+            collapseButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.dataset.target;
+                    const targetElement = document.getElementById(targetId);
+                    const icon = button.querySelector('.collapse-icon');
+        
+                    if (targetElement) {
+                        const isHidden = targetElement.classList.toggle('hidden');
+                        icon.classList.toggle('rotated', !isHidden);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
-
